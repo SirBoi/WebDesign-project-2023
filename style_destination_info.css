@@ -1,0 +1,240 @@
+
+.top {
+    background-color: #F2921D;
+    height: 7.5vh;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.content {
+    background-color: #400E32;
+    flex-direction: column;
+}
+
+.destination-name {
+    max-width: fit-content;
+    position: relative;
+    top: 2vh;
+    left: 3vw;
+    text-align: start;
+    white-space: nowrap;
+    font-size: 8vh;
+    margin-bottom: 5vh;
+}
+
+.destination-data {
+    width: 100%;
+    height: 40vh;
+    margin: 4vh 0;
+}
+
+.destination-info-names {
+    width: 20%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.destination-info-names > ul {
+    margin-left: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: start;
+    height: 100%;
+    width: 100%;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    font-size: 3vh;
+}
+
+.destination-info {
+    width: 20%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    align-items: end;
+}
+
+.destination-info > ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: end;
+    height: 100%;
+    width: 100%;
+}
+
+.destination-description {
+    height: 100%;
+    width: 60%;
+    margin: 5%;
+    display: flex;
+    font-size: 2vh;
+    align-items: flex-start;
+    word-wrap: break-word;
+    text-align: end;
+}
+
+.destination-images {
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.card {
+    display: flex;
+    object-fit: contain;
+    justify-content: space-evenly;
+    width: 35vh;
+    height: 35vh;
+    margin: 5vh 1vw;
+    align-items: center;
+    justify-content: center;
+    background-color: #300a25;
+    border-radius: 5px;
+}
+
+.card > img {
+    max-width: 98%;
+    max-height: 98%;
+}
+
+@media only screen and (max-width: 768px) {
+    .sidebar {
+        background-color: #A61F69;
+        height: 25vh;
+        width: 100vw;
+        position: relative;
+        top: 7.5vh;
+        left: 0;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+    
+    ul {
+        list-style-type: none;
+        padding: 0;
+    }
+    
+    .top {
+        position: relative;
+        top: -25vh;
+        width: 100vw;
+        background-color: #F2921D;
+        height: 7.5vh;
+        align-items: center;
+        justify-content: flex-end;
+    }
+    
+    .content {
+        background-color: #400E32;
+        flex-direction: column;
+        width: 100vw;
+    }
+    
+    .destination-name {
+        max-width: fit-content;
+        position: relative;
+        top: 2vh;
+        left: 3vw;
+        text-align: start;
+        white-space: nowrap;
+        font-size: 8vh;
+        margin-bottom: 4vh;
+    }
+    
+    .destination-data {
+        width: 100%;
+        height: fit-content;
+        margin: 0 0;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .destination-info-names {
+        width: 20%;
+        height: 100%;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        margin-right: 50vw;
+    }
+    
+    .destination-info-names > ul {
+        margin-left: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: start;
+        height: 100%;
+        width: 100%;
+    }
+    
+    li {
+        font-size: 2vh;
+        white-space: nowrap;
+        margin: 3vw;
+    }
+    
+    .destination-info {
+        margin-right: 5vw;
+        width: 20%;
+        height: 100%;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        align-items: end;
+    }
+    
+    .destination-info > ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: end;
+        height: 100%;
+        width: 100%;
+    }
+    
+    .destination-description {
+        height: 100%;
+        width: 60%;
+        margin: 5%;
+        display: flex;
+        font-size: 2vh;
+        align-items: flex-start;
+        word-wrap: break-word;
+        text-align: end;
+    }
+    
+    .destination-images {
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    
+    .card {
+        display: flex;
+        position: relative;
+        left: -1.5vw;
+        margin-top: 4vh;
+        padding: 0.7%;
+        width: 85vw;
+        height: 30vh;
+        justify-content: center;
+        background-color: #300a25;
+        border-radius: 5px;
+        flex-direction: column;
+    }
+    
+    .card > img {
+        max-width: 98%;
+        max-height: 98%;
+    }
+}

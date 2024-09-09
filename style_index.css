@@ -1,0 +1,272 @@
+
+.top {
+    background-color: #F2921D;
+    height: 7.5vh;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.site-logo {
+    width: 15vw;
+    height: 15vw;
+    object-fit: contain;
+    align-items: start;
+    justify-content: center;
+}
+
+.site-logo > img {
+    max-width: 15vw;
+    max-height: 15vw;
+    position: relative;
+    top: -7vh;
+    left: 2vw;
+}
+
+.site-data {
+    width: 100%;
+    height: 100%;
+    justify-content: start;
+    align-items: start;
+}
+
+.site-name {
+    max-width: fit-content;
+    position: relative;
+    top: 2vh;
+    left: 4vw;
+    text-align: start;
+    white-space: nowrap;
+    font-size: 8vh;
+}
+
+.site-text {
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-left: 5vw;
+}
+
+.site-text > div {
+    text-align: center;
+    font-size: 2.2vh;
+}
+
+.content {
+    background-color: #400E32;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.card {
+    display: flex;
+    margin-top: 10vh;
+    padding: 0.7%;
+    width: 30vw;
+    height: 25vh;
+    justify-content: space-between;
+    background-color: #300a25;
+    border-radius: 5px;
+}
+
+.pole {
+    background-color: #A61F69;
+    width: 2%;
+    height: 100%;
+    margin-right: 2%;
+    border-radius: 5px;
+}
+
+.agency-image-div {
+    height: 100%;
+    width: 70%;
+}
+
+.agency-image {
+    object-fit: contain;
+    align-items: center;
+    justify-content: start;
+    max-width: 98%;
+    max-height: 100%;
+}
+
+.agency-image > img {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 5px;
+}
+
+.agency-data {
+    height: 100%;
+    width: 30%;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: end;
+}
+
+.agency-data > div {
+    max-width: 100%;
+    word-wrap: break-word;
+    text-align: end;
+    width: fit-content;
+    height: fit-content;
+}
+
+.agency-data-name {
+    font-size: 150%;
+    margin-right: 4%;
+}
+
+.agency-data-rating {
+    font-size: 4vh;
+    margin-right: 4%;
+}
+
+@media only screen and (max-width: 768px) {
+    .sidebar {
+        background-color: #A61F69;
+        height: 25vh;
+        width: 100vw;
+        position: relative;
+        top: 39.5vh;
+        left: 0;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+    
+    .top {
+        position: relative;
+        top: -25vh;
+        width: 100%;
+        background-color: #F2921D;
+        height: 7.5vh;
+        align-items: center;
+        justify-content: flex-end;
+    }
+    
+    .site-logo {
+        width: 25vw;
+        height: 25vw;
+        object-fit: contain;
+        align-items: start;
+        justify-content: start;
+    }
+    
+    .site-logo > img {
+        max-width: 25vw;
+        max-height: 25vw;
+        position: relative;
+        top: -5vh;
+        left: 3vw;
+    }
+    
+    .site-data {
+        width: 100%;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    
+    .site-name {
+        top: 0;
+        left: 0;
+        max-width: fit-content;
+        margin: 0.5vh;
+        text-align: start;
+        white-space: nowrap;
+        font-size: 5vh;
+    }
+    
+    .site-text {
+        width: 100%;
+        height: 100%;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        margin-left: 0;
+        margin-right: 8vw;
+    }
+    
+    .site-text > div {
+        text-align: center;
+        font-size: 2.2vh;
+    }
+    
+    .content {
+        background-color: #400E32;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+    
+    .card {
+        display: flex;
+        position: relative;
+        left: -1.5vw;
+        margin-top: 4vh;
+        padding: 0.7%;
+        width: 85vw;
+        height: 30vh;
+        justify-content: space-between;
+        background-color: #300a25;
+        border-radius: 5px;
+        flex-direction: column;
+    }
+    
+    .pole {
+        background-color: #A61F69;
+        width: 2%;
+        height: 100%;
+        margin-right: 2%;
+        border-radius: 5px;
+    }
+    
+    .agency-image-div {
+        height: 80%;
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .agency-image {
+        object-fit: contain;
+        align-items: center;
+        justify-content: start;
+        max-width: 100%;
+        max-height: 100%;
+    }
+    
+    .agency-image > img {
+        max-width: 100%;
+        max-height: 100%;
+        border-radius: 5px;
+    }
+    
+    .agency-data {
+        height: 20%;
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: end;
+    }
+    
+    .agency-data > div {
+        max-width: 50%;
+        word-wrap: normal;
+        text-align: end;
+        width: fit-content;
+        height: fit-content;
+    }
+    
+    .agency-data-name {
+        font-size: 4vh;
+        margin-right: 0;
+        margin-left: 2%;
+        white-space: nowrap;
+    }
+    
+    .agency-data-rating {
+        font-size: 4vh;
+        margin-right: 2%;
+    }
+}

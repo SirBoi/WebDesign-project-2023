@@ -1,0 +1,131 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style_basic_window.css">
+    <link rel="stylesheet" href="style_destination_info.css">
+    <script src="script.js"></script>
+    <title>Ale Travel</title>
+</head>
+<body onload="loadDestinationInfo();">
+    <div class="window">
+        <div class="sidebar">
+            <div class="sidebar-links">
+                <a href="index.html">POČETNA STRANICA</a>
+                <button onclick="goToDestinationChange()" style="margin-top: 20%; text-align: center; max-width: 90%; font-size: 120%;">IZMJENA DESTINACIJE</button>
+                <a href="user_change.html">IZMJENA KORISNIKA</a>
+                <a href="error_info.html">PRIKAZ GREŠAKA</a>
+            </div>
+            <div class="sidebar-languages">
+                <a href="" class="serbian-language" style="pointer-events: none;">
+                    <img src="media/flag_serbian.png" alt="Serbian flag">
+                </a>
+                <a href="" class="english-language" style="pointer-events: none;">
+                    <img src="media/flag_english.png" alt="English flag">
+                </a>
+            </div>
+        </div>
+
+        <form class="login-form" id="login-form">
+            <div class="form-container">
+                <div class="form-name">
+                    <div>Uloguj se</div>
+                    <button onclick="closeLogInForm()">Izađi</button>
+                </div>
+
+                <div class="form-data">
+                    <div>
+                        <label for="username">Korisničko ime:</label>
+                        <input type="text" id="username" name="username" required>
+                    </div>
+                    <div>
+                        <label for="password">Lozinka:</label>
+                        <input type="password" id="password" name="password" required>
+                    </div>
+                    <div>
+                        <input style="margin-top: 3%;" type="submit" value="Nastavi">
+                    </div>
+                </div>
+                
+                <button class="form-prompt" onclick="goToRegisterForm()">Nemaš nalog? Registruj se.</button>
+            </div>
+        </form>
+
+        <form class="register-form" id="register-form">
+            <div class="form-container">
+                <div class="form-name">
+                    <div>Registruj se</div>
+                    <button onclick="closeRegisterForm()">Izađi</button>
+                </div>
+
+                <div class="form-data">
+                    <div>
+                        <label for="username">Korisničko ime:</label>
+                        <input type="text" id="username" name="username" required>
+                    </div>
+                    <div>
+                        <label for="password">Lozinka:</label>
+                        <input type="password" id="password" name="password" required>
+                    </div>
+                    <div>
+                        <label for="user-email">Mejl adresa:</label>
+                        <input type="email" id="user-email" name="user-email" placeholder="username@domain.domain" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-z]+$" required>
+                    </div>
+                    <div>
+                        <label for="first-name">Ime:</label>
+                        <input type="text" id="first-name" name="first-name" required>
+                    </div>
+                    <div>
+                        <label for="last-name">Prezime:</label>
+                        <input type="text" id="last-name" name="last-name" required>
+                    </div>
+                    <div>
+                        <label for="birth-date">Datum rođenja:</label>
+                        <input type="date" id="birth-date" name="birth-date" required>
+                    </div>
+                    <div>
+                        <label for="user-phone-number">Broj telefona:</label>
+                        <input type="tel" id="user-phone-number" name="user-phone-number" placeholder="000/0000-000000" pattern="[0-9]{3}/[0-9]{4}-[0-9]+$" required>
+                    </div>
+                    <div>
+                        <label for="user-address">Adresa:</label>
+                        <input type="text" id="user-address" name="user-address" placeholder="Ulica Broj, Grad/Mjesto PoštanskiBroj" pattern="[a-zA-Z\u0100-\u017f ]+ [0-9]+[a-zA-Z]{0,}, [a-zA-Z\u0100-\u017f ]+ [0-9]+$" required>
+                    </div>
+                    <div>
+                        <input style="margin-top: 3%;" type="submit" value="Nastavi">
+                    </div>
+                </div>
+                
+                <button class="form-prompt" onclick="goToLogInForm()">Već imaš nalog? Prijavi se.</button>
+            </div>
+        </form>
+
+        <div class="container">
+            <div class="top">
+                <button class="top-button" onclick="openLogInForm()">ULOGUJ SE</button>
+                <button class="top-button" onclick="openRegisterForm()">REGISTRUJ SE</button>
+            </div>
+
+            <div class="content" id="content">
+                <!-- Mjesto za ucitavanje podataka o destinaciji -->
+            </div>
+
+            <div style="height: 4vh; background-color: #400E32"></div>
+            <div class="separator"></div>
+
+            <div class="bottom">
+                <div class="sponsors">
+                    <img src="media/logo1.png" alt="Sponsor logo">
+                    <img src="media/logo2.png" alt="Sponsor logo">
+                    <img src="media/logo3.png" alt="Sponsor logo">
+                </div>
+                <div class="bottom-info">
+                    <div>Kontakt E-Mail: lekic.sv52.2022@uns.ac.rs</div>
+                    <div>Radio Stefan Lekić - SV 52/2022, FTN Novi Sad</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

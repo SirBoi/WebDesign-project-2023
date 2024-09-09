@@ -1,0 +1,149 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style_basic_window.css">
+    <link rel="stylesheet" href="style_index.css">
+    <script src="script.js"></script>
+    <title>Ale Travel</title>
+</head>
+<body onload="loadIndex();">
+    <div class="window">
+        <div class="sidebar">
+            <div class="sidebar-links">
+                <a href="index.html">POČETNA STRANICA</a>
+                <a href="user_change.html">IZMJENA KORISNIKA</a>
+                <a href="error_info.html">PRIKAZ GREŠAKA</a>
+            </div>
+            <div class="sidebar-languages">
+                <a href="" class="serbian-language" style="pointer-events: none;">
+                    <img src="media/flag_serbian.png" alt="Serbian flag">
+                </a>
+                <a href="" class="english-language" style="pointer-events: none;">
+                    <img src="media/flag_english.png" alt="English flag">
+                </a>
+            </div>
+        </div>
+
+        <form class="login-form" id="login-form">
+            <div class="form-container">
+                <div class="form-name">
+                    <div>Uloguj se</div>
+                    <button onclick="closeLogInForm()">Izađi</button>
+                </div>
+
+                <div class="form-data">
+                    <div>
+                        <label for="login-username">Korisničko ime:</label>
+                        <input type="text" id="login-username" name="login-username" required>
+                    </div>
+                    <div>
+                        <label for="login-password">Lozinka:</label>
+                        <input type="password" id="login-password" name="login-password" required>
+                    </div>
+                    <div>
+                        <input style="margin-top: 3%;" type="submit" value="Nastavi">
+                    </div>
+                </div>
+                
+                <button class="form-prompt" onclick="goToRegisterForm()">Nemaš nalog? Registruj se.</button>
+            </div>
+        </form>
+
+        <form class="register-form" id="register-form" onsubmit="register(); return false">
+            <div class="form-container">
+                <div class="form-name">
+                    <div>Registruj se</div>
+                    <button onclick="closeRegisterForm()">Izađi</button>
+                </div>
+
+                <div class="form-data">
+                    <div>
+                        <label for="register-username">Korisničko ime:</label>
+                        <input type="text" id="register-username" name="register-username" required>
+                    </div>
+                    <div>
+                        <label for="register-password">Lozinka:</label>
+                        <input type="password" id="register-password" name="register-password" required>
+                    </div>
+                    <div>
+                        <label for="register-user-email">Mejl adresa:</label>
+                        <input type="email" id="register-user-email" name="register-user-email" placeholder="username@domain.domain" pattern="[a-zA-Z0-9\u0100-\u017f]+@[a-zA-Z0-9\u0100-\u017f]+\.[a-zA-Z0-9\u0100-\u017f\.]+$" required>
+                    </div>
+                    <div>
+                        <label for="register-first-name">Ime:</label>
+                        <input type="text" id="register-first-name" name="register-first-name" required>
+                    </div>
+                    <div>
+                        <label for="register-last-name">Prezime:</label>
+                        <input type="text" id="register-last-name" name="register-last-name" required>
+                    </div>
+                    <div>
+                        <label for="register-birth-date">Datum rođenja:</label>
+                        <input type="date" id="register-birth-date" name="register-birth-date" required>
+                    </div>
+                    <div>
+                        <label for="register-user-phone-number">Broj telefona:</label>
+                        <input type="tel" id="register-user-phone-number" name="register-user-phone-number" placeholder="000/0000-000000" pattern="[0-9]{3}/[0-9]{4}-[0-9]+$" required>
+                    </div>
+                    <div>
+                        <label for="register-user-address">Adresa:</label>
+                        <input type="text" id="register-user-address" name="register-user-address" placeholder="Ulica Broj, Grad/Mjesto PoštanskiBroj" pattern="[a-zA-Z\u0100-\u017f ]+ [0-9]+[a-zA-Z]{0,}, [a-zA-Z\u0100-\u017f ]+ [0-9]+$" required>
+                    </div>
+                    <div>
+                        <input style="margin-top: 3%;" type="submit" value="Nastavi">
+                    </div>
+                </div>
+                
+                <button class="form-prompt" onclick="goToLogInForm()">Već imaš nalog? Prijavi se.</button>
+            </div>
+        </form>
+
+        <div class="container">
+            <div class="top">
+                <button class="top-button" onclick="openLogInForm()">ULOGUJ SE</button>
+                <button class="top-button" onclick="openRegisterForm()">REGISTRUJ SE</button>
+            </div>
+            
+            <div class="middle" style="background-image: url(media/image1.png); background-size: cover;">
+                <div class="site-logo">
+                    <img src="media/site_logo.png" alt="Site logo">
+                </div>
+                <div class="site-data">
+                    <div class="site-name">
+                        Ale Travel
+                    </div>
+                    <div class="site-text">
+                        <div>Mjesto gdje snovi postaju stvarnost!</div>
+                        <div>Mi smo tu za vas da vam olakšamo pretragu destinacija i ponuda.</div>
+                        <div>Saznajte zanimljivostima o destinacijama koje vam nudimo.</div>
+                        <div>Rezervišite vaše putovanje iz snova uz Ale Travel!</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="separator"></div>
+
+            <div class="content" id="content">
+                <!-- Mjesto za ucitavanje kartica sa podacima o agencijama -->
+            </div>
+
+            <div style="height: 10vh; background-color: #400E32"></div>
+            <div class="separator"></div>
+
+            <div class="bottom">
+                <div class="sponsors">
+                    <img src="media/logo1.png" alt="Sponsor logo">
+                    <img src="media/logo2.png" alt="Sponsor logo">
+                    <img src="media/logo3.png" alt="Sponsor logo">
+                </div>
+                <div class="bottom-info">
+                    <div>Kontakt E-Mail: lekic.sv52.2022@uns.ac.rs</div>
+                    <div>Radio Stefan Lekić - SV 52/2022, FTN Novi Sad</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
